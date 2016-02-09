@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/spree-contrib/spree_i18n.git
+  revision: 53853ad1f1f1c94ba90c6ec177568550354a65d4
+  branch: 3-0-stable
+  specs:
+    spree_i18n (3.0.0)
+      friendly_id-globalize
+      globalize (~> 5.0.1)
+      i18n_data (~> 0.7.0)
+      kaminari-i18n (~> 0.3.2)
+      rails-i18n (~> 4.0.1)
+      spree_core (~> 3.0.4)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: 3b243be5f93f96285e7e67118cb190eb63f0f280
   branch: 3-0-stable
@@ -71,6 +84,10 @@ GEM
     awesome_nested_set (3.0.3)
       activerecord (>= 4.0.0, < 5)
     bcrypt (3.1.10)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.6)
@@ -89,6 +106,7 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
+    coderay (1.1.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -122,11 +140,17 @@ GEM
       railties (>= 3.2, < 5.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+    friendly_id-globalize (1.0.0.alpha2)
+      friendly_id (~> 5.1.0, < 6.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    globalize (5.0.1)
+      activemodel (>= 4.2.0, < 4.3)
+      activerecord (>= 4.2.0, < 4.3)
     highline (1.6.21)
     htmlentities (4.3.4)
     i18n (0.7.0)
+    i18n_data (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -140,6 +164,9 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kaminari-i18n (0.3.2)
+      kaminari
+      rails
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -197,6 +224,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-i18n (4.0.8)
+      i18n (~> 0.7)
+      railties (~> 4.0)
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
@@ -328,6 +358,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
@@ -339,6 +370,7 @@ DEPENDENCIES
   spree (= 3.0.5)
   spree_auth_devise!
   spree_gateway!
+  spree_i18n!
   spring
   turbolinks
   uglifier (>= 1.3.0)
