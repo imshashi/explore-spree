@@ -46,6 +46,9 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
 
 gem 'spree', '3.0.5'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
