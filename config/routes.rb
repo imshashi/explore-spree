@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   mount Spree::Core::Engine, :at => '/'
 
   Spree::Core::Engine.routes.draw do
+    namespace :admin do
+      resource  :theme_settings
+    end
+
     get "/sale" => "home#sale"
   end
           # The priority is based upon order of creation: first created -> highest priority.
